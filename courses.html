@@ -3,10 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Courses - Sanjivani College</title>
+  <style>
+    .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course-card {
+  position: relative;
+  background: #b62727;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: scale(1.03);
+}
+
+.course-card h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.course-info {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.95em;
+  color: #6e08fd;
+  text-align: center;
+}
+
+.course-card:hover .course-info {
+  opacity: 1;
+}
+
+  </style>
 </head>
 <body>
   <h1>Courses Offered</h1>
-  <p>This is the Courses page.</p>
+  
   <a href="index.html">🔙</a>
+  <main>
+  <section class="courses-grid">
+    <div class="course-card">
+      <h3>CSE</h3>
+      <div class="course-info">
+        <p>Computer Science & Engineering (CSE) focuses on software development, system architecture, AI, and networking.</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <h3>BCA</h3>
+      <div class="course-info">
+        <p>Bachelor of Computer Applications is a 3-year undergraduate program that introduces students to IT and programming.</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <h3>MCA</h3>
+      <div class="course-info">
+        <p>Master of Computer Applications is a 2-year program offering advanced training in application development and software engineering.</p>
+      </div>
+    </div>
+  </section>
+</main>
 </body>
 </html>
